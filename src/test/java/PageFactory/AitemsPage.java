@@ -27,7 +27,7 @@ public class AitemsPage {
 	List<WebElement> productTitles;
 	@FindBy(xpath = "//span[@class='a-price-whole']")
 	List<WebElement> productPrices;
-	@FindBy(xpath = "(//span[@class='a-size-base-plus a-color-base a-text-normal'])[6]")
+	@FindBy(xpath = "(//span[@class='a-size-base-plus a-color-base a-text-normal'])[10]")
 	WebElement clickOnAproduct;
 	@FindBy(xpath = "//span[@id='productTitle']")
 	WebElement productName;
@@ -39,7 +39,7 @@ public class AitemsPage {
 		//String Expected=this.clickOnAproduct.getText();
 		//js=(JavaScriptExecutor)driver;
 		wait=new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//span[@class='a-size-base-plus a-color-base a-text-normal'])[6]")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//span[@class='a-size-base-plus a-color-base a-text-normal'])[10]")));
 		this.clickOnAproduct.click();
 	}
 	public void verify_Windows() {

@@ -58,6 +58,7 @@ public class DriveTest extends AppUtil {
 		test.assignAuthor("Mukesh");
 		ACartPage chandan=PageFactory.initElements(driver, ACartPage.class);
 		chandan.verify_Cart();
+		chandan.thega();
 		test.log(LogStatus.PASS,"Test Success");
 		report.endTest(test);
 		report.flush();

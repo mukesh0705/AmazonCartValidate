@@ -24,6 +24,8 @@ public class ACartPage {
 	}
 	@FindBy(xpath = "//span[contains(.,'Added to Cart')]")
 	WebElement AddedToCart;
+	@FindBy(xpath = "//a[@id='nav-logo-sprites']")
+	WebElement home;
 	public boolean verify_Cart() throws Throwable {
 		wait=new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(.,'Added to Cart')]")));
@@ -40,6 +42,10 @@ public class ACartPage {
 			return false;
 
 		}
+		
+	}
+	public void thega() {
+		this.home.click();
 	}
 
 }
