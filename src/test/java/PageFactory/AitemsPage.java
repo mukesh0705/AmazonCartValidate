@@ -26,7 +26,7 @@ public class AitemsPage {
 	WebElement productName;
 	public void shoesPage() {
 		System.out.println(this.productTitles.size());
-		for(int i=0;i<this.productTitles.size();i++){
+		for(int i=0;i<this.productPrices.size();i++){
 			Reporter.log(this.productTitles.get(i).getText()+"  \t             \n\tRs"+this.productPrices.get(i).getText(),true);
 		}
 		//String Expected=this.clickOnAproduct.getText();
