@@ -3,14 +3,21 @@ package PageFactory;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
+
+import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 
 public class AitemsPage {
 	
 	WebDriver driver;
+	//JavaScriptExecutor js;
+	WebDriverWait wait;
 	public AitemsPage(WebDriver driver) 
 	{
 		this.driver=driver;
@@ -30,6 +37,9 @@ public class AitemsPage {
 			Reporter.log(this.productTitles.get(i).getText()+"  \t             \n\tRs"+this.productPrices.get(i).getText(),true);
 		}
 		//String Expected=this.clickOnAproduct.getText();
+		//js=(JavaScriptExecutor)driver;
+		wait=new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//span[@class='a-size-base-plus a-color-base a-text-normal'])[6]")));
 		this.clickOnAproduct.click();
 	}
 	public void verify_Windows() {
