@@ -2,7 +2,6 @@ package PageFactory;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,8 +9,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
-
-import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 
 public class AitemsPage {
 	
@@ -33,7 +30,8 @@ public class AitemsPage {
 	WebElement productName;
 	public void shoesPage() {
 		System.out.println(this.productTitles.size());
-		for(int i=0;i<this.productPrices.size();i++){
+		System.out.println(this.productPrices.size());
+		for(int i=0;i<this.productTitles.size();i++){
 			Reporter.log(this.productTitles.get(i).getText()+"  \t             \n\tRs"+this.productPrices.get(i).getText(),true);
 		}
 		//String Expected=this.clickOnAproduct.getText();
